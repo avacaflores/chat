@@ -2,9 +2,9 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "Run Flask App",
+			"label": "Run FastAPI App",
 			"type": "shell",
-			"command": "c:/Users/aavacaflores/Documents/Repos/chat/.venv/Scripts/python.exe app.py",
+			"command": "c:/Users/aavacaflores/Documents/Repos/chat/.venv/Scripts/python.exe -m uvicorn app:app --host 0.0.0.0 --reload",
 			"isBackground": true,
 			"group": "build"
 		}
