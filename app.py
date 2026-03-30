@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template
 import ollama
+import os
 
 app = Flask(__name__)
-client = ollama.Client(host='http://localhost:11434')
+ollama_host = os.environ.get('OLLAMA_HOST', 'http://localhost:11434')
+client = ollama.Client(host=ollama_host)
 
 @app.route("/", methods=["GET", "POST"])
 def chat():

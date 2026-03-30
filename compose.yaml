@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  chat:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - OLLAMA_HOST=http://192.168.1.146:11434
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python app.py
