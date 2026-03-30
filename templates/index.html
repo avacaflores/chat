@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with Ollama</title>
+</head>
+<body>
+    <h1>Chat</h1>
+    <form method="post">
+        <input type="text" name="message" placeholder="Type your message">
+        <button type="submit">Send</button>
+    </form>
+    {% if user_message %}
+    <p><strong>You:</strong> {{ user_message }}</p>
+    <p><strong>Bot:</strong> {{ bot_message }}</p>
+    {% endif %}
+</body>
+</html>
